@@ -1,0 +1,67 @@
+body{
+
+}
+div.bg{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: url('images/agro.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #e5e7eb;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ef4444;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .mobile-link {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: white;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(230, 81, 0, 0.3)
+    }
+.orange-label {
+    background-color: #e65100;
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: 100%;
+    margin-bottom: 8px
+    }
