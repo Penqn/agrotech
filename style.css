@@ -1,7 +1,6 @@
-body{
+body {}
 
-}
-div.bg{
+div.bg {
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -13,55 +12,125 @@ div.bg{
 }
 
 .nav-link {
-    position: relative;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #e5e7eb;
-    padding-bottom: 4px;
-    transition: color 0.2s ease;
-  }
+	position: relative;
+	font-size: 0.875rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #e5e7eb;
+	padding-bottom: 4px;
+	transition: color 0.2s ease;
+}
 
-  .nav-link:hover {
-    color: #ffffff;
-  }
+.nav-link:hover {
+	color: #ffffff;
+}
 
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #ef4444;
-    transition: width 0.3s ease;
-  }
+.nav-link::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 2px;
+	background-color: #ef4444;
+	transition: width 0.3s ease;
+}
 
-  .nav-link:hover::after {
-    width: 100%;
-  }
+.nav-link:hover::after {
+	width: 100%;
+}
 
-  .mobile-link {
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: white;
-  }
+.mobile-link {
+	font-size: 1.1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: white;
+}
 
-  .text-glow {
-    text-shadow: 0 0 10px rgba(230, 81, 0, 0.3)
-    }
+.text-glow {
+	text-shadow: 0 0 10px rgba(230, 81, 0, 0.3)
+}
+
 .orange-label {
-    background-color: #e65100;
-    color: white;
-    text-align: center;
-    padding: 8px 12px;
-    font-weight: 700;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    width: 100%;
-    margin-bottom: 8px
-    }
+	background-color: #e65100;
+	color: white;
+	text-align: center;
+	padding: 8px 12px;
+	font-weight: 700;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	width: 100%;
+	margin-bottom: 8px
+}
+
+@keyframes coverflow {
+
+	0%,
+	20% {
+		transform: translateX(100%) scale(0.8) rotateY(-30deg);
+		opacity: 0.5;
+		z-index: 10;
+		border-width: 0;
+	}
+
+	25%,
+	45% {
+		transform: translateX(0) scale(1.1) rotateY(0deg);
+		opacity: 1;
+		z-index: 30;
+		border-width: 4px;
+	}
+
+	50%,
+	70% {
+		transform: translateX(-100%) scale(0.8) rotateY(30deg);
+		opacity: 0.5;
+		z-index: 10;
+		border-width: 0;
+	}
+
+	75%,
+	100% {
+		transform: translateX(-200%) scale(0.5);
+		opacity: 0;
+		z-index: 0;
+		border-width: 0;
+	}
+}
+
+.three-d-card {
+	position: absolute;
+	left: 33.333%;
+	width: 33.333%;
+	height: 100%;
+	transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+	animation: coverflow 15s infinite linear;
+	transform-style: preserve-3d;
+}
+
+.three-d-card:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.three-d-card:nth-child(2) {
+	animation-delay: -3s;
+}
+
+.three-d-card:nth-child(3) {
+	animation-delay: -6s;
+}
+
+.three-d-card:nth-child(4) {
+	animation-delay: -9s;
+}
+
+.three-d-card:nth-child(5) {
+	animation-delay: -12s;
+}
+
+.service-card:hover img {
+	transform: scale(1.1);
+}
